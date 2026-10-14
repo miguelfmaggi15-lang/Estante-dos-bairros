@@ -1,0 +1,44 @@
+WIREFRAME — Sebo do Bairro (rascunho do caderno, vale como documentação)
+
+HOME (index.html)
++--------------------------------------------------+
+| faixa: horário · endereço · troca                |
+| LOGO Sebo do Bairro   Início Catálogo Sobre [Reservar] |
++--------------------------------------------------+
+| DESDE 2009 ...      |  +----------------+    |
+| LIVRO BOM É LIVRO   |  | ESTANTE 7 lomb.|    |
+| QUE CIRCULA         |  | capas colors   |    |
+| [Garimpar][Reservar]|  | Tampo madeira  |    |
+| "Se não achar..."   |  +----------------+    |
++--------------------------------------------------+
+| Procura título? [ busca........ ] [Ver estante]  |
++--------------------------------------------------+
+| Separados esta semana        Ver os 12 >         |
+| [livro][livro][livro]  etiquetas tortas          |
++--------------------------------------------------+
+| Como funciona: [Garimpa][Reserva][Retira café]   |
++--------------------------------------------------+
+| Bilhetinhos: ["trouxe 8..."]["achei..."]["meu.."]|
++--------------------------------------------------+
+| Passa pra prosa: endereço/horário | mapa torto   |
++--------------------------------------------------+
+| rodapé: Sebo | Fuça | Balcão                    |
++--------------------------------------------------+
+
+CATÁLOGO (catalogo.html)
+  título + filtros [busca][prateleira][preço][só disp.][limpar]
+  grade 3 col: capa cor + título + autor + R$ + detalhe/reservar/coração
+  clique Detalhe -> modal com ficha + botão reservar
+
+SOBRE (sobre.html)
+  texto história | foto balcão + quem toca
+  linha do tempo 2009-2013-2018-2024
+  perguntas dobráveis (details/summary)
+
+CONTATO (contato.html)
+  form nome/e-mail/tel/assunto/recado | painel endereço + croqui
+
+RESERVAS (php/reservas.php)
+  [Anotar nova reserva: nome, contato, título, retirada, recado]
+  [Fichas: busca + filtro estado]
+  tabela Nº | Quem | Livro | Retirada | Situação | Corrigir Retirar
