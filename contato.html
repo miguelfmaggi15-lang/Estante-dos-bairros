@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — Sebo do Bairro</title>
+  <meta name="description" content="Fala com o Sebo do Bairro: endereço, horários, telefone e formulário.">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="topo-faixa"><div class="envelope"><span>Ter a sáb, das 9h às 19h · Rua das Palmeiras, 214</span><span>Respondemos em até 1 dia útil</span></div></div>
+  <header class="topo">
+    <div class="barra-topo">
+      <a class="marca" href="index.html"><img src="img/logo.svg" alt="" aria-hidden="true"><span class="marca-nome">Sebo do Bairro<small>livros usados &amp; achados</small></span></a>
+      <button class="botao-menu" id="btn-menu" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav class="menu" id="menu" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="sobre.html">Nossa história</a>
+        <a href="contato.html" aria-current="page">Contato</a>
+        <a href="php/reservas.php" class="btn btn-solido btn-pequeno">Reservar livro</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="bloco">
+      <div class="envelope duas-col">
+        <div>
+          <span class="ficha">Balcão e caixa de entrada</span>
+          <h1 style="font-family:var(--fonte-titulo);font-size:clamp(32px,5vw,48px);margin:10px 0 8px">Manda um recado, aparece ou liga</h1>
+          <p style="color:var(--tinta-suave);max-width:32em">Procura um título, quer trocar caixa fechada ou só contar o que anda lendo? A Cida lê tudo e responde com calma.</p>
+          <div class="painel" style="margin-top:16px">
+            <form class="form-grade" data-validar novalidate action="#" method="get">
+              <div class="campo">
+                <label for="nome">Seu nome</label>
+                <input type="text" id="nome" name="nome" required autocomplete="name" placeholder="Como a gente te chama?">
+                <p class="erro" id="nome-erro" aria-live="polite"></p>
+              </div>
+              <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="voce@exemplo.com">
+                <p class="erro" id="email-erro" aria-live="polite"></p>
+              </div>
+              <div class="campo">
+                <label for="telefone">Telefone com DDD</label>
+                <input type="tel" id="telefone" name="telefone" required autocomplete="tel" placeholder="(11) 98765-4321">
+                <p class="erro" id="telefone-erro" aria-live="polite"></p>
+              </div>
+              <div class="campo">
+                <label for="assunto">Assunto</label>
+                <select id="assunto" name="assunto">
+                  <option>Procurar um livro</option>
+                  <option>Quero trocar / vender</option>
+                  <option>Reserva que já fiz</option>
+                  <option>Só um oi</option>
+                </select>
+              </div>
+              <div class="campo inteira">
+                <label for="mensagem">Recado</label>
+                <textarea id="mensagem" name="mensagem" required placeholder="Conta título, autor e o estado que você aceita…"></textarea>
+                <p class="dica">Quanto mais pista, mais rápido achamos. Vale foto da estante também.</p>
+                <p class="erro" id="mensagem-erro" aria-live="polite"></p>
+              </div>
+              <div class="inteira">
+                <button class="btn btn-solido" type="submit">Mandar recado</button>
+              </div>
+            </form>
+          </div>
+          <p style="font-family:var(--fonte-ui);font-size:14px;color:var(--tinta-suave)">Demonstração escolar: este formulário valida no navegador e mostra os erros junto do campo. As reservas de verdade ficam no <a href="php/reservas.php">livro de reservas</a>, guardado no banco.</p>
+        </div>
+        <div>
+          <div class="visita-grade" style="grid-template-columns:1fr">
+            <div class="visita-info">
+              <h2>Onde a porta é verde</h2>
+              <dl>
+                <dt>Endereço</dt><dd>Rua das Palmeiras, 214 — esquina com Rua do Comércio</dd>
+                <dt>Horário</dt><dd>Ter a sex 9h–19h · Sáb 9h–15h</dd>
+                <dt>Telefone</dt><dd>(11) 98765-4321 (também é WhatsApp)</dd>
+                <dt>E-mail</dt><dd>oi@sebodobairro.com.br</dd>
+              </dl>
+              <a class="btn btn-mostarda" href="php/reservas.php">Reservar um livro agora</a>
+            </div>
+            <div class="mapa-falso">
+              <svg viewBox="0 0 400 200" role="img" aria-label="Croqui da esquina do sebo">
+                <rect x="0" y="0" width="400" height="200" fill="#f5eedd"/>
+                <rect x="0" y="84" width="400" height="24" fill="#d9cba3"/>
+                <rect x="110" y="0" width="24" height="200" fill="#d9cba3"/>
+                <rect x="140" y="112" width="90" height="56" fill="#2f4b3e" stroke="#23312b" stroke-width="2"/>
+                <text x="150" y="136" font-family="EB Garamond,serif" font-size="15" fill="#f5eedd">Sebo</text>
+                <text x="150" y="152" font-family="Karla,sans-serif" font-size="10" fill="#d9b45a">porta verde</text>
+                <circle cx="185" cy="96" r="6" fill="#a63a2b"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="envelope rodape-grade">
+      <div><h3>Sebo do Bairro</h3><p style="margin:0">Livros usados, troca justa e conversa boa desde 2009.</p></div>
+      <div><h3>Fuça</h3><ul><li><a href="index.html">Início</a></li><li><a href="catalogo.html">Catálogo</a></li><li><a href="sobre.html">Nossa história</a></li><li><a href="php/reservas.php">Reservas</a></li></ul></div>
+      <div><h3>Balcão</h3><ul><li>Rua das Palmeiras, 214</li><li>Ter a sáb · 9h às 19h</li><li>(11) 98765-4321</li></ul></div>
+    </div>
+    <div class="envelope rodape-base"><span>© <span id="ano">2026</span> Sebo do Bairro</span><span>Projeto escolar AV2 · DWS</span></div>
+  </footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <button id="topo-btn" aria-label="Voltar ao topo">↑</button>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

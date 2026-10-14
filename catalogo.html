@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo — Sebo do Bairro</title>
+  <meta name="description" content="Estante completa do sebo: literatura, clássicos, fantasia, quadrinhos e infantis. Filtra, favorita e reserva.">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="topo-faixa"><div class="envelope"><span>Ter a sáb, das 9h às 19h · Rua das Palmeiras, 214</span><span>Reserva segura o livro por 3 dias</span></div></div>
+  <header class="topo">
+    <div class="barra-topo">
+      <a class="marca" href="index.html"><img src="img/logo.svg" alt="" aria-hidden="true"><span class="marca-nome">Sebo do Bairro<small>livros usados &amp; achados</small></span></a>
+      <button class="botao-menu" id="btn-menu" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav class="menu" id="menu" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="catalogo.html" aria-current="page">Catálogo</a>
+        <a href="sobre.html">Nossa história</a>
+        <a href="contato.html">Contato</a>
+        <a href="php/reservas.php" class="btn btn-solido btn-pequeno">Reservar livro</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="bloco">
+      <div class="envelope">
+        <span class="ficha">Estante completa · conferido no balcão</span>
+        <h1 style="font-family:var(--fonte-titulo);font-size:clamp(32px,5vw,48px);margin:10px 0 6px">O que tem na estante hoje</h1>
+        <p style="margin:0 0 4px;color:var(--tinta-suave);max-width:40em">Preço à caneta, estado descrito sem maquiagem. Toca no coração pra guardar favorito, abre detalhe pra ler a ficha.</p>
+
+        <form class="filtros" onsubmit="return false" aria-label="Filtros do catálogo">
+          <div class="campo">
+            <label for="busca">Buscar por título ou autor</label>
+            <input type="search" id="busca" placeholder="Ex.: Machado, Tolkien, gibi…" autocomplete="off">
+          </div>
+          <div class="campo">
+            <label for="filtro-genero">Prateleira</label>
+            <select id="filtro-genero">
+              <option value="">Todas</option>
+              <option>Literatura</option>
+              <option>Clássicos</option>
+              <option>Fantasia</option>
+              <option>Quadrinhos</option>
+              <option>Infantil</option>
+              <option>História</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="filtro-preco">Até quanto?</label>
+            <select id="filtro-preco">
+              <option value="">Qualquer preço</option>
+              <option value="15">Até R$ 15</option>
+              <option value="20">Até R$ 20</option>
+              <option value="30">Até R$ 30</option>
+            </select>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+            <label class="check-linha"><input type="checkbox" id="filtro-disponivel"> Só disponíveis</label>
+            <button class="btn btn-pequeno" id="limpar-filtros" type="button">Limpar</button>
+          </div>
+        </form>
+        <p class="resultado-conta" id="conta-resultados" aria-live="polite"></p>
+
+        <div class="vitrine" id="vitrine">
+          <article class="livro" data-livro data-titulo="A hora da estrela" data-autor="Clarice Lispector" data-genero="Literatura" data-preco="18" data-disponivel="1" data-estado="Capa firme, páginas amareladas" data-obs="Edição de bolso. Carimbo antigo de biblioteca na folha de rosto, texto intacto.">
+            <span class="selo selo-raro">bem procurado</span>
+            <div class="livro-topo"><div class="capa" style="background:#2f4b3e" aria-hidden="true">C</div><div><h2>A hora da estrela</h2>
+                <p class="autor">Clarice Lispector</p><span class="etiqueta-preco">R$ 18,00</span><span class="etiqueta-genero">Literatura</span></div></div>
+            <p class="livro-corpo">Macabéa cabe na palma e fica na cabeça por semana.</p>
+            <div class="livro-rodape"><button class="btn btn-pequeno" data-detalhe type="button">Detalhe</button><a class="btn btn-solido btn-pequeno" href="php/reservas.php?titulo=A%20hora%20da%20estrela">Reservar</a><button type="button" class="fav" data-fav="hora-estrela" aria-pressed="false" aria-label="Favoritar A hora da estrela"><span aria-hidden="true">♥</span></button></div>
+          </article>
+
+          <article class="livro" data-livro data-titulo="Dom Casmurro" data-autor="Machado de Assis" data-genero="Clássicos" data-preco="12" data-disponivel="1" data-estado="Brochura simples, firme" data-obs="Aquele que todo professor pede. Com anotação a lápis apagável em duas páginas.">
+            <div class="livro-topo"><div class="capa" style="background:#36527a" aria-hidden="true">M</div><div><h2>Dom Casmurro</h2>
+                <p class="autor">Machado de Assis</p><span class="etiqueta-preco">R$ 12,00</span><span class="etiqueta-genero">Clássicos</span></div></div>
+            <p class="livro-corpo">Capitu traiu ou não traiu? Leva e tira a teima no café.</p>
+            <div class="livro-rodape"><button class="btn btn-pequeno" data-detalhe type="button">Detalhe</button><a class="btn btn-solido btn-pequeno" href="php/reservas.php?titulo=Dom%20Casmurro">Reservar</a><button type="button" class="fav" data-fav="dom-casmurro" aria-pressed="false" aria-label="Favoritar Dom Casmurro"><span aria-hidden="true">♥</span></button></div>
+          </article>
+
+          <article class="livro" data-livro data-titulo="Capitães da areia" data-autor="Jorge Amado" data-genero="Literatura" data-preco="22" data-disponivel="1" data-estado="Brochura conservada" data-obs="Sem grifo, sem orelha dobrada. Cheiro bom de sebo.">
+            <div class="livro-topo"><div class="capa" style="background:#a63a2b" aria-hidden="true">J</div><div><h2>Capitães da areia</h2>
+                <p class="autor">Jorge Amado</p><span class="etiqueta-preco">R$ 22,00</span><span class="etiqueta-genero">Literatura</span></div></div>
+            <p class="livro-corpo">Pedro Bala e a turma da praia. Vive saindo pra trabalho de escola.</p>
+            <div class="livro-rodape"><button class="btn btn-pequeno" data-detalhe type="button">Detalhe</button><a class="btn btn-solido btn-pequeno" href="php/reservas.php?titulo=Capit%C3%A3es%20da%20areia">Reservar</a><button type="button" class="fav" data-fav="capitaes" aria-pressed="false" aria-label="Favoritar Capitães da areia"><span aria-hidden="true">♥</span></button></div>
+          </article>
+
+          <article class="livro" data-livro data-titulo="1984" data-autor="George Orwell" data-genero="Literatura" data-preco="24" data-disponivel="1" data-estado="Capa com vinco leve" data-obs="Tradução boa, texto revisado. Sublinhado a lápis em três páginas, apagamos o grosso.">
+            <div class="livro-topo"><div class="capa" style="background:#23312b" aria-hidden="true">O</div><div><h2>1984</h2>
+                <p class="autor">George Orwell</p><span class="etiqueta-preco">R$ 24,00</span><span class="etiqueta-genero">Literatura</span></div></div>
+            <p class="livro-corpo">Grande Irmão de olho. Distopia que conversa com o noticiário.</p>
+            <div class="livro-rodape"><button class="btn btn-pequeno" data-detalhe type="button">Detalhe</button><a class="btn btn-solido btn-pequeno" href="php/reservas.php?titulo=1984">Reservar</a><button type="button" class="fav" data-fav="1984" aria-pressed="false" aria-label="Favoritar 1984"><span aria-hidden="true">♥</span></button></div>
+          </article>
+
+          <article class="livro" data-livro data-titulo="Vidas secas" data-autor="Graciliano Ramos" data-genero="Literatura" data-preco="13" data-disponivel="0" data-estado="Emprestado — volta sexta" data-obs="Exemplar da estante de parceiro, volta sexta-feira. Reserva e avisamos.">
+            <span class="selo selo-novo">volta sexta</span>
+            <div class="livro-topo"><div class="capa" style="background:#6b7f59" aria-hidden="true">G</div><div><h2>Vidas secas</h2>
+                <p class="autor">Graciliano Ramos</p><span class="etiqueta-preco">R$ 13,00</span><span class="etiqueta-genero">Literatura</span></div></div>
+            <p class="livro-corpo">Fabiano, Sinhá Vitória e Baleia. Seco por fora, molhado por dentro.</p>
+            <div class="livro-rodape"><button class="btn btn-pequeno" data-detalhe type="button">Detalhe</button><a class="btn btn-solido btn-pequeno" href="php/reservas.php?titulo=Vidas%20secas">Avisar quando voltar</a><button type="button" class="fav" data-fav="vidas-secas" aria-pressed="false" aria-label="Favoritar Vidas secas"><span aria-hidden="true">♥</span></button></div>
+          </article>
+
+          <article class="livro" data-livro data-titulo="O hobbit" data-autor="J.R.R. Tolkien" data-genero="Fantasia" data-preco="28" data-disponivel="1" data-estado="Capa dura de bolso, ótima" data-obs="Mapinha da Terra-média intacto no início. Lombada sem trinca.">
+            <span class="selo selo-raro">capa dura</span>
+            <div class="livro-topo"><div class="capa" style="background:#4a3e6b" aria-hidden="true">T</div><div><h2>O hobbit</h2>
+                <p class="autor">J.R.R. Tolkien</p><span class="etiqueta-preco">R$ 28,00</span><span class="etiqueta-genero">Fantasia</span></div></div>
+            <p class="livro-corpo">Bilbo saindo da toca. Porta de entrada pra quem quer começar Tolkien.</p>
+            <div class="livro-rodape"><button class="btn btn-pequeno" data-detalhe type="button">Detalhe</button><a class="btn btn-solido btn-pequeno" href="php/reservas.php?titulo=O%20hobbit">Reservar</a><button type="button" class="fav" data-fav="hobbit" aria-pressed="false" aria-label="Favoritar O hobbit"><span aria-hidden="true">♥</span></button></div>
+          </article>
+
+          <article class="livro" data-livro data-titulo="Harry Potter e a pedra filosofal" data-autor="J.K. Rowling" data-genero="Fantasia" data-preco="25" data-disponivel="1" data-estado="Brochura, páginas firmes" data-obs="Primeiro da série, com as ilustrações de capítulo. Nome antigo apagado na folha de rosto.">
+            <div class="livro-topo"><div class="capa" style="background:#7a4a2e" aria-hidden="true">H</div><div><h2>Harry Potter e a pedra filosofal</h2>
+                <p class="autor">J.K. Rowling</p><span class="etiqueta-preco">R$ 25,00</span><span class="etiqueta-genero">Fantasia</span></div></div>
+            <p class="livro-corpo">Hogwarts de primeira viagem. Some rápido nas férias.</p>
+            <div class="livro-rodape"><button class="btn btn-pequeno" data-detalhe type="button">Detalhe</button><a class="btn btn-solido btn-pequeno" href="php/reservas.php?titulo=Harry%20Potter%201">Reservar</a><button type="button" class="fav" data-fav="hp1" aria-pressed="false" aria-label="Favoritar Harry Potter"><span aria-hidden="true">♥</span></button></div>
+          </article>
+
+          <article class="livro" data-livro data-titulo="O cortiço" data-autor="Aluísio Azevedo" data-genero="Clássicos" data-preco="11" data-disponivel="1" data-estado="Edição escolar, simples" data-obs="Texto integral, papel jornal mas inteiro. Bom e barato pra trabalho.">
+            <div class="livro-topo"><div class="capa" style="background:#2f6b62" aria-hidden="true">A</div><div><h2>O cortiço</h2>
+                <p class="autor">Aluísio Azevedo</p><span class="etiqueta-preco">R$ 11,00</span><span class="etiqueta-genero">Clássicos</span></div></div>
+            <p class="livro-corpo">João Romão, Bertoleza e o formigueiro humano do Rio antigo.</p>
+            <div class="livro-rodape"><button class="btn btn-pequeno" data-detalhe type="button">Detalhe</button><a class="btn btn-solido btn-pequeno" href="php/reservas.php?titulo=O%20corti%C3%A7o">Reservar</a><button type="button" class="fav" data-fav="cortico" aria-pressed="false" aria-label="Favoritar O cortiço"><span aria-hidden="true">♥</span></button></div>
+          </article>
+
+          <article class="livro" data-livro data-titulo="Turma da Mônica: Laços" data-autor="Vitor e Lu Cafaggi" data-genero="Quadrinhos" data-preco="19" data-disponivel="1" data-estado="Capa cartonada, miolo ótimo" data-obs="Graphic novel que virou filme. Cores vivas, sem página solta.">
+            <span class="selo selo-novo">pra criançada</span>
+            <div class="livro-topo"><div class="capa" style="background:#c1922a;color:#2a2108" aria-hidden="true">M</div><div><h2>Turma da Mônica: Laços</h2>
+                <p class="autor">Vitor e Lu Cafaggi</p><span class="etiqueta-preco">R$ 19,00</span><span class="etiqueta-genero">Quadrinhos</span></div></div>
+            <p class="livro-corpo">Floquinho sumiu e a turminha vai atrás. Choro garantido no final.</p>
+            <div class="livro-rodape"><button class="btn btn-pequeno" data-detalhe type="button">Detalhe</button><a class="btn btn-solido btn-pequeno" href="php/reservas.php?titulo=Turma%20da%20M%C3%B4nica%20La%C3%A7os">Reservar</a><button type="button" class="fav" data-fav="lacos" aria-pressed="false" aria-label="Favoritar Laços"><span aria-hidden="true">♥</span></button></div>
+          </article>
+
+          <article class="livro" data-livro data-titulo="O pequeno príncipe" data-autor="Antoine de Saint-Exupéry" data-genero="Infantil" data-preco="14" data-disponivel="1" data-estado="Marcas leves de leitura" data-obs="Tradução clássica, ilustrações originais. Embrulhamos pra presente.">
+            <div class="livro-topo"><div class="capa" style="background:#b98e26;color:#2a2108" aria-hidden="true">P</div><div><h2>O pequeno príncipe</h2>
+                <p class="autor">Antoine de Saint-Exupéry</p><span class="etiqueta-preco">R$ 14,00</span><span class="etiqueta-genero">Infantil</span></div></div>
+            <p class="livro-corpo">O essencial é invisível aos olhos. E cabe numa sacola de papel.</p>
+            <div class="livro-rodape"><button class="btn btn-pequeno" data-detalhe type="button">Detalhe</button><a class="btn btn-solido btn-pequeno" href="php/reservas.php?titulo=O%20pequeno%20pr%C3%ADncipe">Reservar</a><button type="button" class="fav" data-fav="pequeno-principe" aria-pressed="false" aria-label="Favoritar O pequeno príncipe"><span aria-hidden="true">♥</span></button></div>
+          </article>
+
+          <article class="livro" data-livro data-titulo="O diário de Anne Frank" data-autor="Anne Frank" data-genero="História" data-preco="17" data-disponivel="1" data-estado="Brochura, lombada boa" data-obs="Edição integral com fotos e posfácio. Leitura forte, necessária.">
+            <div class="livro-topo"><div class="capa" style="background:#5a4a3a" aria-hidden="true">A</div><div><h2>O diário de Anne Frank</h2>
+                <p class="autor">Anne Frank</p><span class="etiqueta-preco">R$ 17,00</span><span class="etiqueta-genero">História</span></div></div>
+            <p class="livro-corpo">Amsterdã, esconderijo e uma menina que escrevia pra não afundar.</p>
+            <div class="livro-rodape"><button class="btn btn-pequeno" data-detalhe type="button">Detalhe</button><a class="btn btn-solido btn-pequeno" href="php/reservas.php?titulo=Anne%20Frank">Reservar</a><button type="button" class="fav" data-fav="anne" aria-pressed="false" aria-label="Favoritar Anne Frank"><span aria-hidden="true">♥</span></button></div>
+          </article>
+
+          <article class="livro" data-livro data-titulo="A revolução dos bichos" data-autor="George Orwell" data-genero="Clássicos" data-preco="15" data-disponivel="1" data-estado="Bolso, páginas claras" data-obs="Fábula rápida de ler, difícil de esquecer. Quatro pernas bom, duas pernas ruim.">
+            <div class="livro-topo"><div class="capa" style="background:#7a2e2e" aria-hidden="true">R</div><div><h2>A revolução dos bichos</h2>
+                <p class="autor">George Orwell</p><span class="etiqueta-preco">R$ 15,00</span><span class="etiqueta-genero">Clássicos</span></div></div>
+            <p class="livro-corpo">A granja que vira espelho. Dá pra ler numa tarde de sábado.</p>
+            <div class="livro-rodape"><button class="btn btn-pequeno" data-detalhe type="button">Detalhe</button><a class="btn btn-solido btn-pequeno" href="php/reservas.php?titulo=Revolu%C3%A7%C3%A3o%20dos%20bichos">Reservar</a><button type="button" class="fav" data-fav="bichos" aria-pressed="false" aria-label="Favoritar A revolução dos bichos"><span aria-hidden="true">♥</span></button></div>
+          </article>
+        </div>
+
+        <p style="margin-top:18px;font-family:var(--fonte-ui);font-size:15px;color:var(--tinta-suave)">Não achou? <a href="contato.html">Pede que a gente procura</a> — lista de procurados sai toda segunda no balcão.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-fundo" id="modal-fundo">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+      <button class="modal-fechar" type="button" aria-label="Fechar detalhes">×</button>
+      <h3 id="modal-titulo"></h3>
+      <div id="modal-corpo"></div>
+    </div>
+  </div>
+
+  <footer class="rodape">
+    <div class="envelope rodape-grade">
+      <div><h3>Sebo do Bairro</h3><p style="margin:0">Livros usados, troca justa e conversa boa desde 2009.</p></div>
+      <div><h3>Fuça</h3><ul><li><a href="index.html">Início</a></li><li><a href="sobre.html">Nossa história</a></li><li><a href="contato.html">Contato</a></li><li><a href="php/reservas.php">Reservas</a></li></ul></div>
+      <div><h3>Balcão</h3><ul><li>Rua das Palmeiras, 214</li><li>Ter a sáb · 9h às 19h</li><li>(11) 98765-4321</li></ul></div>
+    </div>
+    <div class="envelope rodape-base"><span>© <span id="ano">2026</span> Sebo do Bairro</span><span>Projeto escolar AV2 · DWS</span></div>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <button id="topo-btn" aria-label="Voltar ao topo">↑</button>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

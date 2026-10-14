@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sebo do Bairro — Livros usados, achados e prosa</title>
+  <meta name="description" content="Sebo de bairro na Rua das Palmeiras, 214. Livros usados conferidos no balcão, troca, reserva e café passado na hora.">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <div class="topo-faixa">
+    <div class="envelope">
+      <span>Ter a sáb, das 9h às 19h · Rua das Palmeiras, 214</span>
+      <span>Troca com 20% a mais em crédito da loja</span>
+    </div>
+  </div>
+
+  <header class="topo">
+    <div class="barra-topo">
+      <a class="marca" href="index.html">
+        <img src="img/logo.svg" alt="" aria-hidden="true">
+        <span class="marca-nome">Sebo do Bairro<small>livros usados &amp; achados</small></span>
+      </a>
+      <button class="botao-menu" id="btn-menu" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav class="menu" id="menu" aria-label="Navegação principal">
+        <a href="index.html" aria-current="page">Início</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="sobre.html">Nossa história</a>
+        <a href="contato.html">Contato</a>
+        <a href="php/reservas.php" class="btn btn-solido btn-pequeno">Reservar livro</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero">
+      <div class="envelope hero-grade">
+        <div>
+          <span class="ficha">Desde 2009 · 14 mil livros já re-adotados</span>
+          <h1>Livro bom é livro que <em>circula</em> de mão em mão</h1>
+          <p class="sub">Aqui todo exemplar é folheado no balcão, precificado à caneta e guardado na estante certa. Traz o que encalhou aí na sua casa e sai com uma sacola cheia sem pesar no bolso.</p>
+          <div class="hero-acoes">
+            <a class="btn btn-solido" href="catalogo.html">Garimpar o catálogo</a>
+            <a class="btn" href="php/reservas.php">Reservar para retirar</a>
+          </div>
+          <span class="hero-nota">“Se não achar, a gente procura pra você — <strong>sem custo e sem enrolação</strong>.” — Cida, dona do balcão</span>
+        </div>
+        <div class="estante-moldura" role="img" aria-label="Estante com lombadas coloridas de livros usados">
+          <span class="carambo-hero">confere no balcão</span>
+          <div class="prateleira" aria-hidden="true">
+            <div class="lombada">Capitães da areia</div>
+            <div class="lombada">Dom Casmurro</div>
+            <div class="lombada">A hora da estrela</div>
+            <div class="lombada">Sagarana</div>
+            <div class="lombada">Vidas secas</div>
+            <div class="lombada">O cortiço</div>
+            <div class="lombada">Marrom e amarelo</div>
+          </div>
+          <div class="tampo" aria-hidden="true"></div>
+          <div class="estante-legenda"><span>Estante 3 · Literatura brasileira</span><span>preço à caneta na 1ª página</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="faixa-busca">
+      <div class="envelope">
+        <label for="busca-faixa">Procura um título ou autor?</label>
+        <input type="search" id="busca-faixa" placeholder="Ex.: Clarice, Jorge Amado, gibi da Turma da Mônica…" autocomplete="off">
+        <a class="btn btn-mostarda btn-pequeno" href="catalogo.html">Ver estante completa</a>
+      </div>
+    </div>
+
+    <section class="bloco">
+      <div class="envelope">
+        <div class="bloco-cab">
+          <div>
+            <h2>Separados no balcão esta semana</h2>
+            <p>Escolhidos a dedo entre as caixas que chegaram. Quando sai, sai — reserva segura por 3 dias.</p>
+          </div>
+          <a class="link-simples" href="catalogo.html">Ver os 12 da vitrine</a>
+        </div>
+        <div class="vitrine">
+          <article class="livro" data-livro data-titulo="A hora da estrela" data-autor="Clarice Lispector" data-genero="Literatura" data-preco="18" data-disponivel="1" data-estado="Capa firme, páginas amareladas do tempo" data-obs="Edição de bolso, ótima para levar na bolsa. Carimbo antigo da biblioteca na folha de rosto.">
+            <span class="selo selo-raro">bem procurado</span>
+            <div class="livro-topo">
+              <div class="capa" style="background:#2f4b3e" aria-hidden="true">C</div>
+              <div>
+                <h2>A hora da estrela</h2>
+                <p class="autor">Clarice Lispector</p>
+                <span class="etiqueta-preco">R$ 18,00</span><span class="etiqueta-genero">Literatura</span>
+              </div>
+            </div>
+            <p class="livro-corpo">Macabéa cabe na palma e fica na cabeça por semana. Exemplar curtinho, leitura de uma sentada.</p>
+            <div class="livro-rodape">
+              <a class="btn btn-pequeno" href="catalogo.html">Ver detalhes</a>
+              <a class="btn btn-solido btn-pequeno" href="php/reservas.php?titulo=A%20hora%20da%20estrela">Reservar</a>
+            </div>
+          </article>
+
+          <article class="livro" data-livro data-titulo="Capitães da areia" data-autor="Jorge Amado" data-genero="Literatura" data-preco="22" data-disponivel="1" data-estado="Brochura conservada" data-obs="Sem grifo, sem orelha dobrada. Cheiro bom de sebo, aquele mesmo.">
+            <div class="livro-topo">
+              <div class="capa" style="background:#a63a2b" aria-hidden="true">J</div>
+              <div>
+                <h2>Capitães da areia</h2>
+                <p class="autor">Jorge Amado</p>
+                <span class="etiqueta-preco">R$ 22,00</span><span class="etiqueta-genero">Literatura</span>
+              </div>
+            </div>
+            <p class="livro-corpo">Pedro Bala e a turma da praia. Dos que o pessoal da escola vive procurando.</p>
+            <div class="livro-rodape">
+              <a class="btn btn-pequeno" href="catalogo.html">Ver detalhes</a>
+              <a class="btn btn-solido btn-pequeno" href="php/reservas.php?titulo=Capit%C3%A3es%20da%20areia">Reservar</a>
+            </div>
+          </article>
+
+          <article class="livro" data-livro data-titulo="O pequeno príncipe" data-autor="Antoine de Saint-Exupéry" data-genero="Infantil" data-preco="14" data-disponivel="1" data-estado="Capa com marquinha de uso" data-obs="Tradução clássica, ilustrações originais. Ideal para presente com bilhete.">
+            <span class="selo selo-novo">chegou ontem</span>
+            <div class="livro-topo">
+              <div class="capa" style="background:#b98e26;color:#2a2108" aria-hidden="true">P</div>
+              <div>
+                <h2>O pequeno príncipe</h2>
+                <p class="autor">Antoine de Saint-Exupéry</p>
+                <span class="etiqueta-preco">R$ 14,00</span><span class="etiqueta-genero">Infantil</span>
+              </div>
+            </div>
+            <p class="livro-corpo">O presente que nunca erra. A gente embrulha no papel pardo com barbante.</p>
+            <div class="livro-rodape">
+              <a class="btn btn-pequeno" href="catalogo.html">Ver detalhes</a>
+              <a class="btn btn-solido btn-pequeno" href="php/reservas.php?titulo=O%20pequeno%20pr%C3%ADncipe">Reservar</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloco" style="padding-top:0">
+      <div class="envelope">
+        <div class="bloco-cab">
+          <div>
+            <h2>Como funciona por aqui</h2>
+            <p>Sem aplicativo, sem cadastro complicado. Do jeito que bairro gosta.</p>
+          </div>
+        </div>
+        <div class="balcao">
+          <div class="passo">
+            <div class="icone" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+            <h3>Garimpa</h3>
+            <p>Folheia o catálogo ou aparece pra fuçar as caixas de chegada. Todo sábado tem caixa nova de R$ 5.</p>
+          </div>
+          <div class="passo">
+            <div class="icone" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></div>
+            <h3>Reserva</h3>
+            <p>Deixa seu nome no site ou no caderno do balcão. A gente tira da estante e etiqueta com seu nome.</p>
+          </div>
+          <div class="passo">
+            <div class="icone" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-6 9 6v11a1 1 0 01-1 1H4a1 1 0 01-1-1z"/><path d="M9 21v-6h6v6"/></svg></div>
+            <h3>Retira com café</h3>
+            <p>Busca em até 3 dias. Paga no Pix, no dinheiro ou troca por outro livro. Café passado é por nossa conta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloco" style="padding-top:0">
+      <div class="envelope">
+        <div class="bloco-cab">
+          <div>
+            <h2>Bilhetinhos da caderneta</h2>
+            <p>O que o povo escreve no caderno do balcão.</p>
+          </div>
+        </div>
+        <div class="bilhetes">
+          <div class="bilhete"><p>“Trouxe 8, levei 11 e ainda saí devendo um café pra Cida. Melhor troca da minha vida.”</p><footer>— Marcos, Vila Nova</footer></div>
+          <div class="bilhete"><p>“Achei a coleção que minha mãe lia. Chorei no meio do sebo e ninguém achou estranho.”</p><footer>— Patrícia, professora</footer></div>
+          <div class="bilhete"><p>“Meu filho trocou o videogame pela estante de aventura. Não sei o que vocês fizeram, mas obrigado.”</p><footer>— Dona Lúcia</footer></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloco" style="padding-top:0">
+      <div class="envelope">
+        <div class="visita-grade">
+          <div class="visita-info">
+            <h2>Passa pra um dedo de prosa</h2>
+            <p style="margin:0">A campainha da porta faz barulhinho, o gato Fred dorme na vitrine e o café tá quase sempre no fogo.</p>
+            <dl>
+              <dt>Onde</dt><dd>Rua das Palmeiras, 214 — loja de esquina, porta verde</dd>
+              <dt>Quando</dt><dd>Ter a sex 9h–19h · Sáb 9h–15h · Dom e seg fechado</dd>
+              <dt>Fala com</dt><dd>(11) 98765-4321 · oi@sebodobairro.com.br</dd>
+            </dl>
+            <a class="btn btn-mostarda" href="contato.html">Como chegar e falar com a gente</a>
+          </div>
+          <div class="mapa-falso">
+            <svg viewBox="0 0 400 240" role="img" aria-label="Mapa simplificado do bairro com o sebo na esquina">
+              <rect x="0" y="0" width="400" height="240" fill="#f5eedd"/>
+              <rect x="0" y="100" width="400" height="26" fill="#d9cba3"/>
+              <rect x="120" y="0" width="26" height="240" fill="#d9cba3"/>
+              <text x="10" y="92" font-family="Karla,sans-serif" font-size="11" fill="#6b5f3f">Rua das Palmeiras</text>
+              <text x="152" y="20" font-family="Karla,sans-serif" font-size="11" fill="#6b5f3f" transform="rotate(90 152,20)">Rua do Comércio</text>
+              <rect x="150" y="130" width="90" height="60" fill="#2f4b3e" stroke="#23312b" stroke-width="2"/>
+              <text x="160" y="155" font-family="EB Garamond,serif" font-size="15" fill="#f5eedd">Sebo</text>
+              <text x="160" y="172" font-family="Karla,sans-serif" font-size="10" fill="#d9b45a">porta verde</text>
+              <circle cx="195" cy="113" r="7" fill="#a63a2b"/>
+              <text x="208" y="117" font-family="Karla,sans-serif" font-size="11" fill="#23312b">você está aqui</text>
+              <rect x="260" y="40" width="100" height="40" fill="#e3d9bd" stroke="#6b5f3f"/>
+              <text x="270" y="63" font-family="Karla,sans-serif" font-size="11" fill="#4a5a52">padaria</text>
+            </svg>
+            <p style="font-family:var(--fonte-ui);font-size:13.5px;color:#5a4a22;margin:10px 0 0">Desenho torto de propósito — o bairro é pequeno, é só seguir o cheiro de café.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="envelope rodape-grade">
+      <div>
+        <h3>Sebo do Bairro</h3>
+        <p style="margin:0;max-width:30em">Livros usados, troca justa e conversa boa desde 2009. Se o livro passou por aqui, tem história pra contar.</p>
+      </div>
+      <div>
+        <h3>Fuça</h3>
+        <ul>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="sobre.html">Nossa história</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="php/reservas.php">Reservas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Balcão</h3>
+        <ul>
+          <li>Rua das Palmeiras, 214</li>
+          <li>Ter a sáb · 9h às 19h</li>
+          <li>(11) 98765-4321</li>
+        </ul>
+      </div>
+    </div>
+    <div class="envelope rodape-base">
+      <span>© <span id="ano">2026</span> Sebo do Bairro · feito com papel, café e paciência</span>
+      <span>Projeto escolar AV2 · DWS</span>
+    </div>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <button id="topo-btn" aria-label="Voltar ao topo">↑</button>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
