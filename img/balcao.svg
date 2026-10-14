@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="Balcão do sebo">
+  <rect x="0" y="0" width="400" height="260" fill="#efe6cf"/>
+  <rect x="20" y="20" width="360" height="140" rx="6" fill="#2f4b3e" stroke="#23312b" stroke-width="3"/>
+  <rect x="36" y="60" width="26" height="80" fill="#a63a2b"/>
+  <rect x="66" y="48" width="26" height="92" fill="#e7dcc3"/>
+  <rect x="96" y="66" width="26" height="74" fill="#b98e26"/>
+  <rect x="126" y="52" width="26" height="88" fill="#36527a"/>
+  <rect x="156" y="70" width="26" height="70" fill="#6b7f59"/>
+  <rect x="190" y="60" width="52" height="80" fill="#7a4a2e"/>
+  <rect x="250" y="50" width="26" height="90" fill="#4a3e6b"/>
+  <rect x="280" y="64" width="26" height="76" fill="#2f6b62"/>
+  <rect x="310" y="56" width="40" height="84" fill="#f5eedd" stroke="#23312b" stroke-width="2"/>
+  <text x="330" y="110" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="#23312b">♥</text>
+  <rect x="30" y="140" width="340" height="10" fill="#4e3623"/>
+  <rect x="40" y="180" width="320" height="56" rx="4" fill="#8a5f3c" stroke="#23312b" stroke-width="3"/>
+  <rect x="40" y="180" width="320" height="12" fill="#a97a4c"/>
+  <ellipse cx="300" cy="168" rx="22" ry="8" fill="#23312b" opacity=".15"/>
+  <rect x="282" y="148" width="36" height="24" rx="3" fill="#f5eedd" stroke="#23312b" stroke-width="2"/>
+  <path d="M314 154 q10 -2 8 6" stroke="#4a5a52" stroke-width="2" fill="none"/>
+  <ellipse cx="90" cy="172" rx="34" ry="10" fill="#23312b" opacity=".12"/>
+  <rect x="58" y="140" width="64" height="30" rx="2" fill="#36527a" stroke="#23312b" stroke-width="2" transform="rotate(-4 90 155)"/>
+  <rect x="62" y="166" width="64" height="30" rx="2" fill="#a63a2b" stroke="#23312b" stroke-width="2" transform="rotate(3 94 181)"/>
+  <circle cx="340" cy="200" r="16" fill="#23312b"/>
+  <circle cx="345" cy="195" r="5" fill="#e7dcc3"/>
+  <text x="40" y="252" font-family="Karla,sans-serif" font-size="12" fill="#5a4a22">sábado, 10h12 — antes de abrir a porta</text>
+</svg>
