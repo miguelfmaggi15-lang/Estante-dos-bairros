@@ -14,6 +14,11 @@ O site apresenta a loja (home), a estante com filtros (catálogo), a história e
 - `contato.html` — formulário com validação, endereço e croqui
 - `php/reservas.php` — CRUD completo: cadastrar, listar, buscar, editar e excluir reservas
 
+## Semana 2 — Fetch, JSON e DOM
+Na [página Contato](https://miguelfmaggi15-lang.github.io/estante-do-bairro/contato.html#consulta-cep), a seção **De qual bairro você vem?** consulta o ViaCEP com `async/await` e `fetch()`.
+O arquivo `js/cep.js` trata falhas com `try/catch`, lê JSON e atualiza rua, bairro, cidade e UF sem recarregar a página.
+O [planejamento da atividade](docs/atividade-semana-2.md) traz a tabela preenchida, cenários de teste e explicação do código.
+
 ## Pastas
 ```
 sebo-do-bairro/

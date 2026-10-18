@@ -70,6 +70,28 @@
             </form>
           </div>
           <p style="font-family:var(--fonte-ui);font-size:14px;color:var(--tinta-suave)">Demonstração escolar: este formulário valida no navegador e mostra os erros junto do campo. As reservas de verdade ficam no <a href="php/reservas.php">livro de reservas</a>, guardado no banco.</p>
+          <section class="consulta-cep" id="consulta-cep" aria-labelledby="cep-titulo">
+            <h2 id="cep-titulo">De qual bairro você vem?</h2>
+            <p>Consulte seu endereço pelo CEP antes de combinar uma troca de livros. A consulta usa o ViaCEP e não salva seus dados.</p>
+            <form id="form-cep" novalidate>
+              <div class="cep-busca campo">
+                <div>
+                  <label for="cep">Seu CEP</label>
+                  <input id="cep" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="Ex.: 01001-000" aria-describedby="cep-dica cep-status">
+                </div>
+                <button class="btn btn-solido" id="buscar-cep" type="submit">Buscar endereço</button>
+              </div>
+              <p id="cep-dica" class="cep-dica">Digite 8 números, com ou sem hífen. Exemplo para testar: 01001-000.</p>
+            </form>
+            <p id="cep-status" class="cep-status" role="status" aria-live="polite" aria-atomic="true"></p>
+            <dl id="cep-resultado" class="cep-resultado" hidden>
+              <div><dt>Rua</dt><dd id="cep-rua"></dd></div>
+              <div><dt>Bairro</dt><dd id="cep-bairro"></dd></div>
+              <div><dt>Cidade</dt><dd id="cep-cidade"></dd></div>
+              <div><dt>Estado (UF)</dt><dd id="cep-uf"></dd></div>
+            </dl>
+            <noscript><p>Ative o JavaScript no navegador para consultar o endereço.</p></noscript>
+          </section>
         </div>
         <div>
           <div class="visita-grade" style="grid-template-columns:1fr">
@@ -111,5 +133,6 @@
   <div id="toast" role="status" aria-live="polite"></div>
   <button id="topo-btn" aria-label="Voltar ao topo">↑</button>
   <script src="js/main.js" defer></script>
+  <script src="js/cep.js" defer></script>
 </body>
 </html>

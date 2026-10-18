@@ -255,6 +255,23 @@ footer.rodape{background:var(--tinta);color:#d8cba6;margin-top:30px;border-top:4
 #topo-btn{position:fixed;right:18px;bottom:18px;width:48px;height:48px;border-radius:50%;border:2px solid var(--tinta);background:var(--mostarda);font-size:20px;cursor:pointer;display:none;box-shadow:var(--sombra-miuda)}
 #topo-btn.visivel{display:block}
 
+/* consulta de endereco — ViaCEP */
+.consulta-cep{margin-top:30px;padding-top:24px;border-top:2px solid var(--linha);scroll-margin-top:100px}
+.consulta-cep h2{font-family:var(--fonte-titulo);font-size:30px;line-height:1.15;margin:0 0 10px}
+.cep-busca{display:flex;gap:12px;align-items:end;flex-wrap:wrap}
+.cep-busca > div{flex:1;min-width:160px}
+.cep-busca button{min-height:46px}
+.cep-busca button:disabled{opacity:.7;cursor:wait;transform:none;box-shadow:none}
+.cep-dica,.cep-status{font-family:var(--fonte-ui);font-size:14px;line-height:1.5}
+.cep-dica{color:var(--tinta-suave);margin:8px 0}
+.cep-status{min-height:1.5em;margin:12px 0;font-weight:600;overflow-wrap:anywhere}
+.cep-status[data-estado="erro"]{color:var(--carimbo)}
+.cep-busca input[aria-invalid="true"]{border-color:var(--carimbo)}
+.cep-resultado{margin:0;background:var(--papel-claro);border:1px solid var(--linha);border-radius:6px;padding:12px 16px}
+.cep-resultado > div{display:grid;grid-template-columns:90px minmax(0,1fr);gap:10px;padding:6px 0}
+.cep-resultado dt{font-family:var(--fonte-ui);font-size:14px;font-weight:700}
+.cep-resultado dd{margin:0;overflow-wrap:anywhere}
+
 /* responsivo menu */
 @media(max-width:860px){
   nav.menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--papel-claro);flex-direction:column;align-items:stretch;padding:10px;border-bottom:2px solid var(--tinta)}
