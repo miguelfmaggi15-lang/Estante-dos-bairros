@@ -45,6 +45,3 @@ sebo-do-bairro/
 
 ## JavaScript (js/main.js, externo)
 Menu mobile, filtro do catálogo em tempo real, favoritos em localStorage, modal de ficha, validação com erro junto do campo, máscara de telefone, toast e voltar ao topo. Sem biblioteca, sem framework.
-
-## Decisões de design (pra contar na apresentação)
-Papel de fundo escuro-quente (#e7dcc3) com tinta verde-preta, mostarda e carimbo vermelho — cores de etiqueta, fita e capa velha. Títulos em EB Garamond, texto em Crimson Text (cara de livro), bilhetes à mão em Caveat e carimbos em Special Elite. Nada de cartãozinho igual nem título com palavra colorida: cada livro tem capa de cor diferente, etiqueta torta e selo só quando merece. Uma animação só no herói, e respeita quem prefere menos movimento.
