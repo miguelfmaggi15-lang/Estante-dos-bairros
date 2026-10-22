@@ -272,6 +272,23 @@ footer.rodape{background:var(--tinta);color:#d8cba6;margin-top:30px;border-top:4
 .cep-resultado dt{font-family:var(--fonte-ui);font-size:14px;font-weight:700}
 .cep-resultado dd{margin:0;overflow-wrap:anywhere}
 
+/* ---------- acervo ao vivo (API Flask) ---------- */
+.api-painel{background:var(--papel-claro);border:2px solid var(--tinta);border-radius:8px;padding:18px;box-shadow:var(--sombra)}
+.api-form{display:grid;gap:12px;margin:0 0 12px}
+@media(min-width:700px){.api-form{grid-template-columns:1fr 1fr}.api-form-acao{grid-column:1/-1}}
+@media(min-width:1000px){.api-form{grid-template-columns:1.2fr 1.2fr .6fr .9fr auto}.api-form-acao{grid-column:auto}}
+.api-form-acao{display:flex}
+.api-form-acao .btn{width:100%}
+.api-form-acao .btn:disabled{opacity:.7;cursor:wait;transform:none;box-shadow:none}
+.api-status{font-family:var(--fonte-ui);font-size:14.5px;font-weight:600;min-height:1.4em;margin:0 0 10px;overflow-wrap:anywhere}
+.api-status[data-estado="erro"]{color:var(--carimbo)}
+.api-status[data-estado="ok"]{color:var(--verde)}
+.api-vazio{font-family:var(--fonte-ui);font-size:15px;color:var(--tinta-suave);margin:0}
+#acervo-vitrine{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+#acervo-vitrine .etiqueta-genero{margin-left:0}
+#acervo-vitrine .badge{margin-top:8px}
+#acervo-vitrine .livro:nth-child(odd),#acervo-vitrine .livro:nth-child(3n){transform:none}
+
 /* responsivo menu */
 @media(max-width:860px){
   nav.menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--papel-claro);flex-direction:column;align-items:stretch;padding:10px;border-bottom:2px solid var(--tinta)}

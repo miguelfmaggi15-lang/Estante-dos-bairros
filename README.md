@@ -5,7 +5,7 @@ Projeto AV2 · DWS – Desenvolvimento de Websites · 3º bimestre 2026
 ## O que é
 Site de um sebo de bairro fictício na Rua das Palmeiras, 214. O problema que resolve: livros parados na estante de casa e gente que quer ler barato. O público: vizinhos, estudantes e colecionadores que garimpam usados.
 
-O site apresenta a loja (home), a estante com filtros (catálogo), a história e as regras de troca (sobre), o contato e o endereço (contato) e o caderno de reservas com banco de dados (PHP + MySQL).
+O site apresenta a loja (home), a estante com filtros (catálogo), a história e as regras de troca (sobre), o contato e o endereço (contato), o caderno de reservas com banco de dados (PHP + MySQL) e o acervo ao vivo consumido de uma API Flask com SQLite.
 
 ## Páginas
 - `index.html` — home: herói, busca, destaques, como funciona, bilhetes, visita
@@ -19,13 +19,31 @@ Na [página Contato](https://miguelfmaggi15-lang.github.io/Estante-dos-bairros/c
 O arquivo `js/cep.js` trata falhas com `try/catch`, lê JSON e atualiza rua, bairro, cidade e UF sem recarregar a página.
 
 
+## Semana 3 — Front-end conectado à API Flask
+A seção **Acervo ao vivo** do catálogo conversa com a API da pasta `api/`:
+- `GET /livros` devolve os livros do banco SQLite e o `fetch` monta os cartões sem recarregar a página;
+- o formulário envia `POST /livros` com `Content-Type: application/json` e `JSON.stringify()`;
+- `try/catch` avisa quando a API está fora do ar ou recusa um cadastro;
+- o CORS é liberado com `flask-cors` para o site poder chamar a API em outra porta.
+
+Como rodar a API (Python 3.10+):
+```
+cd api
+pip install -r requirements.txt
+python app.py
+```
+Ela sobe em `http://localhost:5000`. Para rodar os testes: `python -m pytest` dentro de `api/`.
+
+O GitHub Pages publica só o site estático; para o Acervo ao vivo funcionar, deixe a API rodando na sua máquina.
+
 ## Pastas
 ```
 sebo-do-bairro/
   index.html  catalogo.html  sobre.html  contato.html
   css/estilo.css
-  js/main.js
+  js/main.js  js/cep.js  js/api-livros.js
   img/logo.svg  img/balcao.svg
+  api/app.py  api/test_app.py  api/requirements.txt
   php/conexao.php  php/reservas.php
   sql/banco.sql
   docs/sitemap.md  docs/wireframe.txt

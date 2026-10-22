@@ -158,6 +158,45 @@
         <p style="margin-top:18px;font-family:var(--fonte-ui);font-size:15px;color:var(--tinta-suave)">Não achou? <a href="contato.html">Pede que a gente procura</a> — lista de procurados sai toda segunda no balcão.</p>
       </div>
     </section>
+
+    <section class="bloco" id="acervo-api-secao">
+      <div class="envelope">
+        <span class="ficha">Integração · API Flask + SQLite</span>
+        <h2 style="font-family:var(--fonte-titulo);font-size:clamp(28px,4vw,40px);margin:10px 0 6px">Acervo ao vivo</h2>
+        <p style="margin:0 0 16px;color:var(--tinta-suave);max-width:44em">Esta estante vem do banco da API Flask: a lista carrega com GET e o formulário cadastra com POST, sem recarregar a página.</p>
+
+        <div class="api-painel">
+          <form class="api-form" id="form-livro" novalidate>
+            <div class="campo">
+              <label for="api-titulo">Título</label>
+              <input type="text" id="api-titulo" name="titulo" autocomplete="off" required>
+            </div>
+            <div class="campo">
+              <label for="api-autor">Autor</label>
+              <input type="text" id="api-autor" name="autor" autocomplete="off" required>
+            </div>
+            <div class="campo">
+              <label for="api-ano">Ano</label>
+              <input type="number" id="api-ano" name="ano_publicacao" min="1" max="2100" inputmode="numeric" required>
+            </div>
+            <div class="campo">
+              <label for="api-disponivel">Situação</label>
+              <select id="api-disponivel" name="disponivel">
+                <option value="true">Disponível</option>
+                <option value="false">Emprestado</option>
+              </select>
+            </div>
+            <div class="api-form-acao">
+              <button class="btn btn-solido" id="api-enviar" type="submit">Cadastrar no acervo</button>
+            </div>
+          </form>
+
+          <p class="api-status" id="api-status" role="status" aria-live="polite"></p>
+          <p class="resultado-conta" id="api-conta" aria-live="polite"></p>
+          <div class="vitrine" id="acervo-vitrine"></div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <div class="modal-fundo" id="modal-fundo">
@@ -180,5 +219,6 @@
   <div id="toast" role="status" aria-live="polite"></div>
   <button id="topo-btn" aria-label="Voltar ao topo">↑</button>
   <script src="js/main.js" defer></script>
+  <script src="js/api-livros.js" defer></script>
 </body>
 </html>
